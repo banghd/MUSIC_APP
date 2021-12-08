@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.blmusicplayer">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/replace_thumbnail"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/replace_thumbnail"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SongListingActivity"
+            android:label="Danh sách bài hát"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="BL Music Player"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".NotificationReceiver"/>
+        <service android:name="com.example.blmusicplayer.MusicService" />
+    </application>
+
+</manifest>
