@@ -45,8 +45,8 @@ public class MusicService extends Service implements  MediaPlayer.OnPreparedList
 
     NotificationManager notificationManager;
     NotificationCompat.Builder builder;
-    int NOTIFICATION_ID = 18082000;
-    String CHANNEL_ID = "18082000";
+    int NOTIFICATION_ID = 02022000;
+    String CHANNEL_ID = "02022000";
 
     RemoteViews notificationLayout;
 
